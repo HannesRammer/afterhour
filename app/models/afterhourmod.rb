@@ -1,0 +1,2 @@
+class Afterhourmod < ApplicationRecord
+end

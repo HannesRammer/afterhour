@@ -1,0 +1,2 @@
+class UserToAfterhour < ApplicationRecord
+end

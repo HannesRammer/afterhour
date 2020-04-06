@@ -1,0 +1,6 @@
+<h1>Editing Afterhourmod</h1>
+
+<%= render 'form', afterhourmod: @afterhourmod %>
+
+<%= content_tag "a", 'Show',href: url_for(@afterhourmod) %> |
+<%= content_tag "a", 'Back', href: afterhourmods_path %>

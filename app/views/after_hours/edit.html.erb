@@ -1,0 +1,6 @@
+<h1>Editing After Hour</h1>
+
+<%= render 'form', after_hour: @after_hour %>
+
+<%= content_tag "a", 'Show', href:url_for(@after_hour) %> |
+<%= content_tag "a", 'Back', href:after_hours_path %>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Afterhour</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script type="module" src="https://unpkg.com/elements@2.0.5/lib/elements-bundled.js"></script>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+<% if current_user %>
+  <p>
+    Logged in as <%= current_user.email %>.
+    <%= content_tag("a", "Log Out", elevation: "2", href: "#{logout_path}") %>
+  </p>
+
+
+<%#= component "a" ,,"{{eleva#tion =>"2",  href=>"#{logout_path}" }%>
+<%#= component("image-gallery", images=[…], selected_index=0)%>
+<% else %>
+  <p>
+    <%= content_tag("a", "Sign Up", elevation: "2", href: "#{signup_url}") %>
+    <%= content_tag("a", "Log In", elevation: "2", href: "#{login_url}") %>
+  </p>
+<% end %>
+<% if action_name != "index" && controller_name != "home" %>
+  <p>
+    <%= content_tag("a", "Home", elevation: "2", href: "#{root_url}") %>
+  </p>
+<% end %>
+<div class="container">
+  <%= yield %>
+</div>
+</body>
+</html>

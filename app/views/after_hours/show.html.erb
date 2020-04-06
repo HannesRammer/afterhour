@@ -1,0 +1,70 @@
+<div id="notice"><%= notice %></div>
+
+
+<div id="after_hour_name">
+
+  <%= @after_hour.name %>
+</div>
+<div id="after_hour_active">
+
+  <% if @after_hour.active  %>
+    <img alt="Image html" width="90%" height="90%" id="profile_image" src="<%= image_url("running.gif") %>">
+
+  <%else%>
+    <img alt="Image html" width="90%" height="90%" id="profile_image" src="<%= image_url("thisstop_mellow.jpg") %>">
+
+  <%end%>
+</div>
+
+
+
+
+<div style="display:none;">
+
+
+  <div>
+    <label>Max</label>
+    <input></input>
+  </div>
+
+
+  <div>
+    <label>Pars</label>
+    <input></input>
+
+  </div>
+
+
+  <div>
+    <label>MITBRINGSEL</label>
+    <input></input>
+
+  </div>
+
+
+
+<div>
+  <label>MUSIC</label>
+  <input></input>
+</div>
+
+<div>
+  <label>MOOD</label>
+  <input></input>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div >
+  <br><br><%= content_tag( "a","Edit".html_safe, href: edit_after_hour_path(@after_hour),class:"") %>
+
+  <%= content_tag( "a","Back".html_safe, href: root_path,class:"") %></div>
+
+
+

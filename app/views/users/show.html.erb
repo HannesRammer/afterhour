@@ -1,0 +1,30 @@
+<h3>User Profile</h3>
+<p id="notice">
+  <%= notice %>
+</p>
+<p>
+  <label>Email</label>
+  <%= content_tag "input", {}, {value: @user.email, placeholder: "Email"} %>
+</p>
+<p>
+  <label>Description</label>
+  <%= content_tag "input", {}, {value: @user.description} %>
+</p>
+<p>
+  <%= content_tag "image", {}, {alt: "Image html", width: "90%", height: "90%", id: "profile_image", src: "https://sketch2code.azurewebsites.net/Content/img/fake_img.svg"} %>
+</p>
+<p>
+  <label>XP</label>
+  <%= content_tag "input", {}, {value: @user.description} %>
+</p>
+<p>
+  <label>Fertick.</label>
+  <%= content_tag "input", {}, {value: @user.description} %>
+</p>
+<p>
+  <label>Beschreibung</label>
+  <%= text_area_tag  placeholder: "Enter text", rows: "6" %>
+</p>
+
+<%= content_tag "a", 'Edit', href: edit_user_path(@user) %> |
+<%= content_tag "a", 'Back', href: url_for(users_path) %>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Afterhour</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+<!-- Simulate a smartphone / tablet -->
+<div class="mobile-container">
+
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <%# if action_name != "index" && controller_name != "home" %>
+      <%= content_tag("a", "Home", elevation: "2", href: "#{root_url}",class:"active") %>
+    <%#end %>
+
+    <div id="myLinks">
+
+      <% if current_user %>
+        Logged in as <%= current_user.email %>.
+        <%= content_tag("a", "Log Out", elevation: "2", href: "#{logout_path}") %>
+
+
+
+<%#= component "a" ,,"{{eleva#tion =>"2",  href=>"#{logout_path}" }%>
+<%#= component("image-gallery", images=[…], selected_index=0)%>
+      <% else %>
+        <p>
+          <%= content_tag("a", "Sign Up", elevation: "2", href: "#{signup_url}") %>
+          <%= content_tag("a", "Log In", elevation: "2", href: "#{login_url}") %>
+        </p>
+      <% end %>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <div style="padding-left:16px">
+    <div class="container">
+
+
+
+
+
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

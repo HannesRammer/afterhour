@@ -1,0 +1,6 @@
+<h1>Editing User</h1>
+
+<%= render 'form', user: @user %>
+
+<%= content_tag "a", 'Show', href:url_for(@user) %> |
+<%= content_tag "a", 'Back', href:users_path %>
