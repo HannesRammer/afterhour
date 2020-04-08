@@ -138,10 +138,12 @@ body {
 }
 h2 {
     color: rgb(236,100,75);
-    /*animation: wheelHueColor 20s infinite;*/
     text-align: center;
-    margin-top: 35px;
+    margin-top: 5px;
     background: rgba(0,0,0,0.6);
+    font-size: 3.25rem !important;
+    height: 85px;
+    padding-top: 20px;
 }
 .mdc-card{
     margin: 25px;
@@ -184,10 +186,10 @@ a:hover{
 
 a{
     color: #c1a552;
-    font-size: 2em;
+    font-size: 2rem;
 }
 td{
-    font-size: 2em;
+    font-size: 2rem;
     padding: 20px !important;
 }
 
@@ -198,11 +200,14 @@ h1{
 .mdc-card{
     /*width: 30%;
     float: left;*/
-    height:114px;
+    height:300px;
 }
 
 /**/
 
 html{
     height: 100%;
+}
+[type=reset], [type=submit], button, html [type=button] {
+    -webkit-appearance: checkbox !important;
 }
