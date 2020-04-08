@@ -23,19 +23,21 @@
 
 .container {
     position: relative;
+    max-width: 98%;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    height:100%;
+    font-size:2em !important;
 }
 
 .mobile-container {
     max-width: 100%;
     margin: auto;
     background-color: #333333;
-    height: 500px;
     color: white;
-    border-radius: 10px;
+    height:100%
 }
 
 .topnav {
@@ -50,9 +52,9 @@ body {
 
 .topnav a {
     color: white;
-    padding: 14px 16px;
+    padding: 60px 16px;
     text-decoration: none;
-    font-size: 17px;
+    /*font-size: 5em;*/
     display: block;
 }
 
@@ -138,7 +140,7 @@ h2 {
     color: rgb(236,100,75);
     /*animation: wheelHueColor 20s infinite;*/
     text-align: center;
-    margin-top: 25%;
+    margin-top: 35px;
     background: rgba(0,0,0,0.6);
 }
 .mdc-card{
@@ -148,7 +150,7 @@ h2 {
 .active {
     background-color:  #4CAF50;
 
-    animation: wheelHueBackground 20s infinite;
+    /*animation: wheelHueBackground 20s infinite;*/
     color: #544e4e;
 }
 /*img,.mdc-card__media {*/
@@ -194,6 +196,13 @@ h1{
 }
 
 .mdc-card{
-    width: 30%;
-    float: left;
+    /*width: 30%;
+    float: left;*/
+    height:114px;
+}
+
+/**/
+
+html{
+    height: 100%;
 }

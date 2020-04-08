@@ -36,15 +36,15 @@
 <%#= component "a" ,,"{{eleva#tion =>"2",  href=>"#{logout_path}" }%>
 <%#= component("image-gallery", images=[…], selected_index=0)%>
       <% else %>
-        <p>
+
           <%= content_tag("a", "Sign Up", elevation: "2", href: "#{signup_url}") %>
           <%= content_tag("a", "Log In", elevation: "2", href: "#{login_url}") %>
-        </p>
+
       <% end %>
       <a href="#contact">Contact</a>
       <a href="#about">About</a>
     </div>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()" style="height: 138px;">
       <i class="fa fa-bars"></i>
     </a>
   </div>
