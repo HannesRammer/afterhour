@@ -49,6 +49,8 @@ test:
 #
 production:
   <<: *default
-  database: afterhour_production
-  username: afterhour
-  password: <%= ENV['AFTERHOUR_DATABASE_PASSWORD'] %>
+  database: musclesa_afterhour_production
+  username: musclesa_afterhour
+  password: b4Hhhd4EFSpc6Xg
+  #username: afterhour
+  #password: <%= ENV['AFTERHOUR_DATABASE_PASSWORD'] %>

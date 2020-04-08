@@ -8631,19 +8631,3 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 104ms (Views: 100.6ms | ActiveRecord: 0.9ms)
 
 
-Started GET "/" for 127.0.0.1 at 2020-04-07 21:27:21 +0200
-  [1m[35m (6.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
-  ↳ C:/rubyinstaller-2.6.1-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
-  ↳ C:/rubyinstaller-2.6.1-1-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
-Processing by HomeController#index as HTML
-  Rendering home/index.html.erb within layouts/application
-  [1m[36mAfterHour Load (1.0ms)[0m  [1m[34mSELECT `after_hours`.* FROM `after_hours`[0m
-  ↳ app/views/after_hours/_follow_list.html.erb:6
-  Rendered after_hours/_follow_list.html.erb (1526.7ms)
-  Rendered home/index.html.erb within layouts/application (1543.5ms)
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
-  ↳ app/controllers/application_controller.rb:7
-Completed 200 OK in 1766ms (Views: 1701.1ms | ActiveRecord: 28.4ms)
-
-
